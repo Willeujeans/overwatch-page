@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+body,html{
+  background:black;
+  width:100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.HeaderElm{
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:98%;
+  background: rgba(255, 255, 255,.8);
+  margin:1rem auto 0rem auto;
+  border-radius:10px;
+  position:relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.LinkContainer{
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:2.5rem;
+  padding:1.3rem 1rem 1.3rem 1rem;
+  overflow:hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.Link{
+  color: black;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size:1.2rem;
+  font-weight:600;
+}
+.MarginLeft{
+  margin-left:150px;
+}
+.RightSide{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  position:absolute;
+  right:1%;
+  top:50%;
+  transform:translateY(-50%);
+  gap:2.5rem;
+}
+.OrangeButton{
+  padding:1rem 1.3rem 1rem 1.3rem;
+  background:rgb(248, 117, 24);
+  color:white;
+  border-radius:10px;
+}
+.WhiteSquare{
+  background:white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  left:0;
+  height:100%;
+  padding: 0 2rem 0 2rem;
 }
-
-.App-link {
-  color: #61dafb;
+.BlizzardLogo{
+  height:45px;
+  width:85px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.OverwatchLogo{
+  height:35px;
+  width:35px;
+}
+.SearchLogo{
+  height:25px;
+  width:25px;
+  transform:translateY(25%);
+  filter: opacity(50%);
+}
+.backgroundHexagons{  
+  width:100%;
+  height:500px;
+  position:absolute;
+  left:0px;
+  top:90px;
+  z-index:1;
+}
+.AlignToCenter{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.hexHolder{
+  display:flex;
+  flex-direction:row;
+  margin-top:-20px;
+}
+.hexagon{
+  position:relative;
+  height:100px;
+  width:100px;
+  min-height:100px;
+  min-width:100px;
+  overflow:visible;
+  opacity:100%;
+}
+.hex{
+  position:absolute;
+  height:100%;
+  width:41%;
+  background: white;
+}
+.HexImage{
+  transform:rotate(90deg);
+  margin-left: -7px;
+  margin-right:-7px;
+  height:64px;
+  width:64px;
+  opacity:100%;
+}
+.hexSquare1{
+ transform:rotate(0deg);
+}
+.hexSquare2{
+  transform:rotate(45deg);
+ }
+ .hexSquare3{
+  transform:rotate(90deg);
+ }
+ .whiteWall{
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:0;
+  background:rgb(255,255,255);
+  width:25px;
+  height:1000px;
+  opacity:100%;
+  box-shadow: rgb(255,255,255) 0px 54px 55px, rgb(255,255,255) 0px -12px 30px, rgb(255,255,255) 0px 4px 6px, rgb(255,255,255) 0px 12px 13px, rgb(255,255,255) 0px -3px 5px;
+  animation: rolling 12s linear infinite;
+  transform:translateX(-50%);
+ }
+ @keyframes rolling {
+  0%{
+    width:0px;
+    opacity:0%;
+    left:0%;
   }
-  to {
-    transform: rotate(360deg);
+  20%{
+    width:25px;
+    opacity:20%;
   }
-}
+  50%{
+    width:150px;
+    opacity:20%;
+  }
+  80%{
+    width:25px;
+    opacity:20%;
+  }
+  100%{
+    width:0px;
+    opacity:0%;
+    left:100%;
+  }
+ }
+
+ .wallContainer{
+  overflow:hidden;
+  position:absolute;
+  width:100%;
+  height:100%;
+ }
